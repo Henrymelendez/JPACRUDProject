@@ -16,6 +16,8 @@ public class Transactions {
 	@Column(name = "item_no")
 	private int ProductNumber;
 	
+	
+	
 
 	public Transactions() {
 		super();
