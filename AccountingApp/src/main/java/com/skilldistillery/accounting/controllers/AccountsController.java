@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.skilldistillery.accounting.data.AccountDAO;
 
@@ -17,8 +18,28 @@ public class AccountsController {
 	
 	@RequestMapping(path = {"/", "home.do"})
 	public String index(Model model) {
-		model.addAttribute("DEBUG", dao.findById(1));
+		model.addAttribute("account", dao.findAll());
 		return "index";
 	}
+	
+	@RequestMapping(path = "create.do", method = RequestMethod.GET)
+	public String updatePage() {
+		
+		return "addTransaction";
+	}
+	
+	
+	@RequestMapping(path = "analytic.do", method = RequestMethod.GET)
+	public String analytics(Model model) {
+		model.addAttribute("account", dao.findAll());
+		
+		return "analytics";
+	}
+	
+	
+	
+	
+	
+	
 
 }

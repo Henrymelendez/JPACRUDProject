@@ -45,7 +45,7 @@ class TransactionsTest {
 	}
 
 	@Test
-	void test_() {
+	void test_transactions_mapping() {
 		assertNotNull(accounts);
 		assertEquals(1, accounts.getId());
 	}

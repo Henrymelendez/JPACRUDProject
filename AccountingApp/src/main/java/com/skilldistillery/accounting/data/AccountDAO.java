@@ -11,6 +11,8 @@ public interface AccountDAO {
 	Transactions findById(int id);
 	
 	List<Transactions> findAll();
+	
+	Transactions addTransaction(Transactions transaction);
 		
 	
 
