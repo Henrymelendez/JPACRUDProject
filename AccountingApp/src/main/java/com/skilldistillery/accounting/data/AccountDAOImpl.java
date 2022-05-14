@@ -33,18 +33,19 @@ public class AccountDAOImpl implements AccountDAO {
 	}
 
 	@Override
+	@Transactional
 	public Transactions addTransaction(Transactions transaction ) {
 		// TODO Auto-generated method stub
 		transaction.setUnitCost(transaction.getCogs() / transaction.getQuantity());
 		transaction.setUnitPrice(transaction.getRevenue() / transaction.getQuantity());
 		
-		em.getTransaction().begin();
+		
 		
 		em.persist(transaction);
 		
 		em.flush();
 		
-		em.getTransaction().commit();
+		
 		return transaction;
 	}
 	
@@ -65,6 +66,13 @@ public class AccountDAOImpl implements AccountDAO {
 		}
 		return managed;
 		
+	}
+
+	@Override
+	public boolean updateTransaction(Transactions transaction) {
+		
+		
+				return false;
 	}
 	
 	

@@ -13,6 +13,8 @@ public interface AccountDAO {
 	List<Transactions> findAll();
 	
 	Transactions addTransaction(Transactions transaction);
+	
+	boolean updateTransaction(Transactions transaction);
 		
 	
 
