@@ -69,6 +69,17 @@ public class AccountDAOImpl implements AccountDAO {
 	}
 
 
+
+	@Override
+	public void delete(int id) {
+		Transactions toDelete = em.find(Transactions.class, id);
+		
+		em.remove(toDelete);
+		
+		
+	}
+
+
 	
 	
 	

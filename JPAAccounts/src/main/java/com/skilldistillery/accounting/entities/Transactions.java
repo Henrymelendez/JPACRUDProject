@@ -36,6 +36,21 @@ public class Transactions {
 	public Transactions() {
 		super();
 	}
+	
+	
+	
+
+	public Transactions(int productNumber, String description, double revenue,double cogs, int quantity) {
+		super();
+		this.productNumber = productNumber;
+		this.description = description;
+		this.quantity = quantity;
+		this.cogs = cogs;
+		this.revenue = revenue;
+	}
+
+
+
 
 	public int getId() {
 		return id;

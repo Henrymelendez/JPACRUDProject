@@ -15,6 +15,10 @@ public interface AccountDAO {
 	Transactions addTransaction(Transactions transaction);
 	
 	Transactions update(int id, Transactions transaction);
+	
+	void delete(int id);
+	
+	
 		
 	
 

@@ -63,11 +63,13 @@ public class AccountsController {
 	
 	
 	
-	@RequestMapping(path = "delete.do", params = "id", method = RequestMethod.POST)
-	public String deleteTransaction(int id, Model model) {
+	@RequestMapping(path = "delete.do", params = "id", method = RequestMethod.GET)
+	public String deleteTransaction(@RequestParam int id, Model model) {
+		
+		dao.delete(id);
 		
 		
-		return "index";
+		return "redirect:/";
 	}
 	
 	
