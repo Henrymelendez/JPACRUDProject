@@ -14,7 +14,7 @@ public interface AccountDAO {
 	
 	Transactions addTransaction(Transactions transaction);
 	
-	boolean updateTransaction(Transactions transaction);
+	Transactions update(int id, Transactions transaction);
 		
 	
 

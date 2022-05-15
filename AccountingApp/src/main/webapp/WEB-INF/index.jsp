@@ -43,13 +43,14 @@
 
 						<tr>
 							<td><c:out value="${f.id}" /></td>
+							<td><c:out value="${f.productNumber}" /></td>
 							<td><c:out value="${f.description}" /></td>
 							<td><fmt:formatNumber type="currency" value="${f.cogs }"/></td>
 							<td><c:out value="${f.quantity}" /></td>
 							<td><fmt:formatNumber type="currency" value="${f.revenue }"/></td>
-							<td><a href="edit?id=<c:out value='${f.id}' />">Edit</a>
+							<td><a href="update.do?id=<c:out value='${f.id}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?id=<c:out value='${f.id}' />">Delete</a></td>
+								href="delete.do?id=<c:out value='${f.id}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 					<!-- } -->

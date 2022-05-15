@@ -49,32 +49,26 @@ public class AccountDAOImpl implements AccountDAO {
 		return transaction;
 	}
 	
+	@Override
 	public Transactions update(int id, Transactions transaction) {
 		
 		Transactions managed = em.find(Transactions.class, id);
 		
 		if(managed != null) {
 		
-		em.getTransaction().begin();
 		
 		managed.setProductNumber(transaction.getProductNumber());
-		managed.setUnitCost(transaction.getUnitCost());
 		managed.setDescription(transaction.getDescription());
+		managed.setQuantity(transaction.getQuantity());
 		
-		em.getTransaction().commit();
+		
 		
 		}
 		return managed;
 		
 	}
 
-	@Override
-	public boolean updateTransaction(Transactions transaction) {
-		
-		
-				return false;
-	}
-	
+
 	
 	
 	

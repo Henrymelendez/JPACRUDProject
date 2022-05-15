@@ -7,6 +7,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <title>Insert title here</title>
 <style>
 th, td {
@@ -17,7 +19,7 @@ th, td {
 table {
 	position: relative;
 	top: 10px;
-	left:300px;
+	left:80px;
 	width: 50%;
 	height: 50%;
 }
@@ -34,8 +36,8 @@ td, th {
 
 <body>
 
-<div  class="table">
-	<table>
+<div  class="container ">
+	<table class="table table-bordered">
 	<tbody>
 	<tr>
 	<th>Item No.</th>
