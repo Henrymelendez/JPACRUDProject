@@ -69,14 +69,23 @@
                         
                            <fieldset class="form-group">
                             <label>Product Number</label> <input type="text" value="<c:out value='${account.productNumber}' />" class="form-control" name="productNumber" required="required">
-                        
-                        
-                          <fieldset class="form-group">
+                        </fieldset>
+
+                        <fieldset class="form-group">
                             <label>Description</label> <input type="text" value="<c:out value='${account.description}' />" class="form-control" name="description" required="required">
                         </fieldset>
 
                         <fieldset class="form-group">
-                            <label>Quantity</label> <input type="text" value="<c:out value='${account.quantity}' />" class="form-control" name="quantity">
+                            <label>Quantity</label> <input type="number" value="<c:out value='${account.quantity}' />" class="form-control" name="quantity">
+                        </fieldset>
+
+                        
+                        <fieldset class="form-group">
+                            <label>Costs Of Sold Goods</label> <input type="number" value="<c:out value='${account.cogs}' />" class="form-control" name="cogs">
+                        </fieldset>
+                        
+                         <fieldset class="form-group">
+                            <label>Revenue</label> <input type="number" value="<c:out value='${account.revenue}' />" class="form-control" name="revenue">
                         </fieldset>
                         
                         
