@@ -44,7 +44,7 @@ $(document).ready(function(){
 			<h3 class="text-center">List Of Transactions</h3>
 			<hr>
 			<div class="input-group rounded">
-	<input id="myInput" type="text" placeholder="Search" class="form-control rounded" aria-label="Search" aria-describedby="search-addon">
+	<input id="myInput" type="search" placeholder="Search" class="form-control rounded" aria-label="Search" aria-describedby="search-addon">
 	<span class="input-group-text border-0" id="search-addon">
     <i class="fas fa-search"></i>
   </span>
@@ -74,8 +74,8 @@ $(document).ready(function(){
 							<td><fmt:formatNumber type="currency" value="${f.cogs }"/></td>
 							<td><c:out value="${f.quantity}" /></td>
 							<td><fmt:formatNumber type="currency" value="${f.revenue }"/></td>
-							<td><a href="update.do?id=<c:out value='${f.id}' />">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a
+							<td><a type="button" href="update.do?id=<c:out value='${f.id}' />">Edit</a>
+								&nbsp;&nbsp;&nbsp;&nbsp; <a type="button"
 								href="delete.do?id=<c:out value='${f.id}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
